@@ -16,16 +16,16 @@ let s:term_grey = 236
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left = [ [ '#2c323d', '#98c379', 'bold' ], [ '#98c379', '#2c323d' ] ]
+let s:p.normal.left = [ [ '#2c323d', '#98c379', 'bold' ], [ '#abb2bf', '#3e4452' ], [ '#98c379', '#2c323d' ] ]
 let s:p.normal.right = [ [ '#2c323d', '#98c379' ], [ '#abb2bf', '#3e4452' ], [ '#98c379', '#2c323d' ] ]
 let s:p.inactive.right = [ [ '#2c323d', '#61afef' ], [ '#abb2bf', '#3e4452' ] ]
 let s:p.inactive.left = s:p.inactive.right[1:]
 " her
-let s:p.insert.left = [ [ '#2c323d', '#61afef', 'bold' ], [ '#61afef', '#2c323d' ] ]
+let s:p.insert.left = [ [ '#2c323d', '#61afef', 'bold' ], [ '#ABB2BF', '#3E4452' ], [ '#61afef', '#2c323d' ] ]
 let s:p.insert.right = [ [ '#2c323d', '#61afef' ], [ '#ABB2BF', '#3E4452' ], [ '#61afef', '#2c323d' ] ]
-let s:p.replace.left = [ [ '#2c323d', '#e06c75', 'bold' ], [ '#e06c75', '#2c323d' ] ]
+let s:p.replace.left = [ [ '#2c323d', '#e06c75', 'bold' ], s:p.normal.left[1], [ '#e06c75', '#2c323d' ] ]
 let s:p.replace.right = [ [ '#2c323d', '#e06c75', 'bold' ], s:p.normal.right[1], [ '#e06c75', '#2c323d' ] ]
-let s:p.visual.left = [ [ '#2c323d', '#c678dd', 'bold' ], [ '#c678dd', '#2c323d' ] ]
+let s:p.visual.left = [ [ '#2c323d', '#c678dd', 'bold' ], s:p.normal.left[1], [ '#c678dd', '#2c323d' ] ]
 let s:p.visual.right = [ [ '#2c323d', '#c678dd', 'bold' ], s:p.normal.right[1], [ '#c678dd', '#2c323d' ] ]
 let s:p.normal.middle = [ [ '#5c6370', '#2c323d' ] ]
 let s:p.insert.middle = s:p.normal.middle
