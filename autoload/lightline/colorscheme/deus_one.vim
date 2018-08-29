@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: autoload/lightline/colorscheme/deus_one.vim
-" Author: nrhodes91
-" License: MIT License
+" Author: https://github.com/nrhodes91
+" License: Unlicense
 " Last Change: 2018/06/27
 " =============================================================================
 
