@@ -17,9 +17,9 @@ let s:term_grey = 236
 if lightline#colorscheme#background() ==# 'light'
 let s:guicolors =  {
             \ 'mono4':  '#abb2bf',
-            \ 'mono3':  '#828997',
-            \ 'mono2':  '#5c6370',
-            \ 'mono1':  '#3e4452',
+            \ 'mono3':  '#a0a1a7',
+            \ 'mono2':  '#696c77',
+            \ 'mono1':  '#383a42',
             \ 'black':  '#dedede',
             \ 'red':    '#E45649',
             \ 'green':  '#50A14F',
