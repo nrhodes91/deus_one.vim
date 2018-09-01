@@ -14,28 +14,47 @@ let s:term_white = 145
 let s:term_black = 235
 let s:term_grey = 236
 
+let s:gcolors =  {
+            \ 'black': '#2c323d',
+            \ 'red': '#e06c75',
+            \ 'green': '#98c379',
+            \ 'yellow': '#e5c07b',
+            \ 'blue': '#61afef',
+            \ 'purple': '#c678dd',
+            \ 'cyan': '#0184BC',
+            \ 'white': '#abb2bf'
+            \ }
+
+if lightline#colorscheme#background() ==# 'light'
+    let s:gcolors['background'] = s:gcolors['white']
+    let s:gcolors['foreground'] = '#3e4452'
+else
+    let s:gcolors['background'] = '#3e4452'
+    let s:gcolors['foreground'] = s:gcolors['white']
+endif
+
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left = [ [ '#2c323d', '#98c379', 'bold' ], [ '#abb2bf', '#3e4452' ] ]
-let s:p.insert.left = [ [ '#2c323d', '#61afef', 'bold' ], [ '#abb2bf', '#3E4452' ] ]
-let s:p.visual.left = [ [ '#2c323d', '#c678dd', 'bold' ], s:p.normal.left[1] ]
-let s:p.replace.left = [ [ '#2c323d', '#e06c75', 'bold' ], s:p.normal.left[1] ]
-let s:p.inactive.left = [ [ '#abb2bf', '#3e4452' ] ]
+let s:p.normal.left =   [ [ s:gcolors.black, s:gcolors.green, 'bold' ], [ s:gcolors.foreground, '#3e4452' ] ]
+let s:p.insert.left =   [ [ s:gcolors.black, s:gcolors.blue, 'bold' ], [ s:gcolors.foreground, s:gcolors.background ] ]
+let s:p.visual.left =   [ [ s:gcolors.black, s:gcolors.purple, 'bold' ], s:p.normal.left[1] ]
+let s:p.replace.left =  [ [ s:gcolors.black, s:gcolors.red, 'bold' ], s:p.normal.left[1] ]
+let s:p.inactive.left = [ [ s:gcolors.foreground, '#3e4452' ] ]
 
-let s:p.normal.middle = [ [ '#5c6370', '#2c323d' ] ]
+let s:p.normal.middle = [ [ '#5c6370', s:gcolors.black ] ]
 let s:p.insert.middle = s:p.normal.middle
 let s:p.replace.middle = s:p.normal.middle
 
-let s:p.normal.right = [ [ '#2c323d', '#98c379' ], [ '#abb2bf', '#3e4452' ], [ '#98c379', '#2c323d' ] ]
-let s:p.insert.right = [ [ '#2c323d', '#61afef' ], [ '#abb2bf', '#3E4452' ], [ '#61afef', '#2c323d' ] ]
-let s:p.visual.right = [ [ '#2c323d', '#c678dd', 'bold' ], s:p.normal.right[1], [ '#c678dd', '#2c323d' ] ]
-let s:p.replace.right = [ [ '#2c323d', '#e06c75', 'bold' ], s:p.normal.right[1], [ '#e06c75', '#2c323d' ] ]
-let s:p.inactive.right = [ [ '#2c323d', '#61afef' ],  s:p.inactive.left[0] ]
+let s:p.normal.right =  [ [ s:gcolors.black, s:gcolors.green ], [ s:gcolors.foreground, '#3e4452' ], [ s:gcolors.green, s:gcolors.black ] ]
+let s:p.insert.right =  [ [ s:gcolors.black, s:gcolors.blue ], [ s:gcolors.foreground, s:gcolors.background ], [ s:gcolors.blue, s:gcolors.black ] ]
+let s:p.visual.right =  [ [ s:gcolors.black, s:gcolors.purple, 'bold' ], s:p.normal.right[1], [ s:gcolors.purple, s:gcolors.black ] ]
+let s:p.replace.right = [ [ s:gcolors.black, s:gcolors.red, 'bold' ], s:p.normal.right[1], [ s:gcolors.red, s:gcolors.black ] ]
+let s:p.inactive.right = [ [ s:gcolors.black, s:gcolors.blue ],  s:p.inactive.left[0] ]
 
-let s:p.normal.error = [ [ '#2c323d', '#e06c75' ] ]
-let s:p.normal.warning = [ [ '#2c323d', '#e5c07b' ] ]
+let s:p.normal.error =  [ [ s:gcolors.black, s:gcolors.red ] ]
+let s:p.normal.warning = [ [ s:gcolors.black, '#e5c07b' ] ]
 
-let s:p.tabline.left = [ s:p.normal.left[1] ]
+let s:p.tabline.left =  [ s:p.normal.left[1] ]
 let s:p.tabline.middle = s:p.normal.middle
 let s:p.tabline.right = [ s:p.normal.left[1] ]
 let s:p.tabline.tabsel = [ s:p.normal.left[0] ]
