@@ -31,6 +31,10 @@ let s:guicolors =  {
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
+if lightline#colorscheme#background() ==# 'light'
+    let [ s:guicolors.black, s:guicolors.mono1 ] = [ s:guicolors.mono1, s:guicolors.black ]
+endif
+
 let s:p.normal.left =   [ [ s:guicolors.black, s:guicolors.green, 'bold' ],
             \ [ s:guicolors.mono1, '#3e4452' ], [ s:guicolors.mono3, s:guicolors.black ] ]
 let s:p.insert.left =   [ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
