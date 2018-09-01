@@ -15,38 +15,34 @@ let s:term_black = 235
 let s:term_grey = 236
 
 let s:gcolors =  {
-            \ 'black': '#2c323d',
-            \ 'red': '#e06c75',
-            \ 'green': '#98c379',
+            \ 'mono1':  '#abb2bf',
+            \ 'mono2':  '#828997',
+            \ 'mono3':  '#5c6370',
+            \ 'mono4':  '#3e4452',
+            \ 'black':  '#2c323d',
+            \ 'red':    '#e06c75',
+            \ 'green':  '#98c379',
             \ 'yellow': '#e5c07b',
-            \ 'blue': '#61afef',
+            \ 'blue':   '#61afef',
             \ 'purple': '#c678dd',
-            \ 'cyan': '#0184BC',
-            \ 'white': '#abb2bf'
+            \ 'cyan':   '#0184BC',
+            \ 'white':  '#dedede'
             \ }
-
-if lightline#colorscheme#background() ==# 'light'
-    let s:gcolors['background'] = s:gcolors['white']
-    let s:gcolors['foreground'] = '#3e4452'
-else
-    let s:gcolors['background'] = '#3e4452'
-    let s:gcolors['foreground'] = s:gcolors['white']
-endif
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left =   [ [ s:gcolors.black, s:gcolors.green, 'bold' ], [ s:gcolors.foreground, '#3e4452' ] ]
-let s:p.insert.left =   [ [ s:gcolors.black, s:gcolors.blue, 'bold' ], [ s:gcolors.foreground, s:gcolors.background ] ]
+let s:p.normal.left =   [ [ s:gcolors.black, s:gcolors.green, 'bold' ], [ s:gcolors.mono1, '#3e4452' ] ]
+let s:p.insert.left =   [ [ s:gcolors.black, s:gcolors.blue, 'bold' ], [ s:gcolors.mono1, s:gcolors.mono4 ] ]
 let s:p.visual.left =   [ [ s:gcolors.black, s:gcolors.purple, 'bold' ], s:p.normal.left[1] ]
 let s:p.replace.left =  [ [ s:gcolors.black, s:gcolors.red, 'bold' ], s:p.normal.left[1] ]
-let s:p.inactive.left = [ [ s:gcolors.foreground, '#3e4452' ] ]
+let s:p.inactive.left = [ [ s:gcolors.mono1, '#3e4452' ] ]
 
 let s:p.normal.middle = [ [ '#5c6370', s:gcolors.black ] ]
 let s:p.insert.middle = s:p.normal.middle
 let s:p.replace.middle = s:p.normal.middle
 
-let s:p.normal.right =  [ [ s:gcolors.black, s:gcolors.green ], [ s:gcolors.foreground, '#3e4452' ], [ s:gcolors.green, s:gcolors.black ] ]
-let s:p.insert.right =  [ [ s:gcolors.black, s:gcolors.blue ], [ s:gcolors.foreground, s:gcolors.background ], [ s:gcolors.blue, s:gcolors.black ] ]
+let s:p.normal.right =  [ [ s:gcolors.black, s:gcolors.green ], [ s:gcolors.mono1, '#3e4452' ], [ s:gcolors.green, s:gcolors.black ] ]
+let s:p.insert.right =  [ [ s:gcolors.black, s:gcolors.blue ], [ s:gcolors.mono1, s:gcolors.mono4 ], [ s:gcolors.blue, s:gcolors.black ] ]
 let s:p.visual.right =  [ [ s:gcolors.black, s:gcolors.purple, 'bold' ], s:p.normal.right[1], [ s:gcolors.purple, s:gcolors.black ] ]
 let s:p.replace.right = [ [ s:gcolors.black, s:gcolors.red, 'bold' ], s:p.normal.right[1], [ s:gcolors.red, s:gcolors.black ] ]
 let s:p.inactive.right = [ [ s:gcolors.black, s:gcolors.blue ],  s:p.inactive.left[0] ]
