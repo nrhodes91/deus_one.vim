@@ -50,7 +50,7 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 
 let s:p.normal.left =   [ [ s:guicolors.black, s:guicolors.green, 'bold' ],
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ], [ s:guicolors.mono3, s:guicolors.black ] ]
+            \ [ s:guicolors.mono1, s:guicolors.mono4 ], [ s:guicolors.mono2, s:guicolors.black ] ]
 let s:p.insert.left =   [ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
             \ [ s:guicolors.mono1, s:guicolors.mono4 ], s:p.normal.left[2] ]
 let s:p.visual.left =   [ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
