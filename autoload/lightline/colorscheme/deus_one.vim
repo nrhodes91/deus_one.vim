@@ -83,18 +83,18 @@ let s:p.normal.right =  [
             \ [ s:guicolors.green, s:guicolors.black ]
             \ ]
 let s:p.insert.right =  [
-            \ [ s:guicolors.black, s:guicolors.blue ],
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ],
+            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
+            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
             \ [ s:guicolors.blue, s:guicolors.black ]
             \ ]
 let s:p.visual.right =  [
             \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
-            \ s:p.normal.right[1],
+            \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
             \ [ s:guicolors.purple, s:guicolors.black ]
             \ ]
 let s:p.replace.right = [
             \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
-            \ s:p.normal.right[1],
+            \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
             \ [ s:guicolors.red, s:guicolors.black ]
             \ ]
 let s:p.inactive.right = [
