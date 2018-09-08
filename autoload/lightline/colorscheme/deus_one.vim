@@ -78,8 +78,8 @@ let s:p.insert.middle = s:p.normal.middle
 let s:p.replace.middle = s:p.normal.middle
 
 let s:p.normal.right =  [
-            \ [ s:guicolors.black, s:guicolors.green ],
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ],
+            \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
+            \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
             \ [ s:guicolors.green, s:guicolors.black ]
             \ ]
 let s:p.insert.right =  [
