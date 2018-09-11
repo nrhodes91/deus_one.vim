@@ -16,18 +16,18 @@ let s:term_grey = 236
 
 if lightline#colorscheme#background() ==# 'light'
 let s:guicolors =  {
-            \ 'mono4':  '#abb2bf',
-            \ 'mono3':  '#a0a1a7',
-            \ 'mono2':  '#696c77',
-            \ 'mono1':  '#383a42',
-            \ 'black':  '#dedede',
-            \ 'red':    '#E45649',
-            \ 'green':  '#50A14F',
-            \ 'yellow': '#986801',
-            \ 'blue':   '#4078F2',
-            \ 'purple': '#A626A4',
-            \ 'cyan':   '#0184BC',
-            \ 'white':  '#444444',
+            \ 'mono4':  '#b3b3b3',
+            \ 'mono3':  '#999999',
+            \ 'mono2':  '#666666',
+            \ 'mono1':  '#444444',
+            \ 'black':  '#cccccc',
+            \ 'red':    '#b1271b',
+            \ 'green':  '#387138',
+            \ 'yellow': '#9c5a1c',
+            \ 'blue':   '#0e49c8',
+            \ 'purple': '#871785',
+            \ 'cyan':   '#016793',
+            \ 'white':  '#222222',
             \ }
 else
 let s:guicolors =  {
@@ -52,7 +52,7 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 let s:p.normal.left =   [
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
             \ [ s:guicolors.mono1, s:guicolors.mono4 ],
-            \ [ s:guicolors.mono2, s:guicolors.black ]
+            \ [ s:guicolors.mono1, s:guicolors.black ]
             \ ]
 let s:p.insert.left =   [
             \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
@@ -73,7 +73,7 @@ let s:p.inactive.left = [
             \ [ s:guicolors.mono1, s:guicolors.mono4 ]
             \ ]
 
-let s:p.normal.middle = [ [ s:guicolors.mono3, s:guicolors.black ] ]
+let s:p.normal.middle = [ [ s:guicolors.mono1, s:guicolors.black ] ]
 let s:p.insert.middle = s:p.normal.middle
 let s:p.replace.middle = s:p.normal.middle
 
