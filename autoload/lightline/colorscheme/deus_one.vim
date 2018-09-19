@@ -73,9 +73,9 @@ let s:p.inactive.left = [
             \ [ s:guicolors.mono1, s:guicolors.mono4 ]
             \ ]
 
-let s:p.normal.middle = s:p.normal.left
-let s:p.insert.middle = s:p.normal.left
-let s:p.replace.middle = s:p.normal.left
+let s:p.normal.middle = [ s:p.normal.left[2] ]
+let s:p.insert.middle = s:p.normal.middle
+let s:p.replace.middle = s:p.normal.middle
 
 let s:p.normal.right =  [
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
