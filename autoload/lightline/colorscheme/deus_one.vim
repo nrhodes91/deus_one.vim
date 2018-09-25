@@ -2,17 +2,7 @@
 " Filename:     autoload/lightline/colorscheme/deus_one.vim
 " Author:       https://github.com/nrhodes91
 " License:      Unlicense
-" Last Change:  2018/06/27
 " =============================================================================
-
-let s:term_red = 204
-let s:term_green = 114
-let s:term_yellow = 180
-let s:term_blue = 39
-let s:term_purple = 170
-let s:term_white = 145
-let s:term_black = 235
-let s:term_grey = 236
 
 if lightline#colorscheme#background() ==# 'light'
 let s:guicolors =  {
