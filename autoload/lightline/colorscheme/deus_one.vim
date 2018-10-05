@@ -101,3 +101,4 @@ let s:p.tabline.right = [ s:p.normal.left[1] ]
 let s:p.tabline.tabsel = [ s:p.normal.left[0] ]
 
 let g:lightline#colorscheme#deus_one#palette = lightline#colorscheme#fill(s:p)
+
