@@ -25,7 +25,7 @@ let s:guicolors =  {
             \ 'mono2':  '#828997',
             \ 'mono3':  '#5c6370',
             \ 'mono4':  '#3e4452',
-            \ 'black':  '#33393B',
+            \ 'black':  '#2c323d',
             \ 'red':    '#e06c75',
             \ 'green':  '#98c379',
             \ 'yellow': '#e5c07b',
