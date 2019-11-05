@@ -41,7 +41,7 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 let s:p.normal.left =   [
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
-            \ [ s:guicolors.green, s:guicolors.mono4 ],
+            \ [ s:guicolors.green, s:guicolors.mono4, 'bold' ],
             \ [ s:guicolors.mono1, s:guicolors.black ]
             \ ]
 let s:p.normal.right =  [
@@ -52,7 +52,7 @@ let s:p.normal.right =  [
 
 let s:p.insert.left =   [
             \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
-            \ [ s:guicolors.blue, s:guicolors.mono4 ],
+            \ [ s:guicolors.blue, s:guicolors.mono4, 'bold' ],
             \ s:p.normal.left[2]
             \ ]
 let s:p.insert.right =  [
@@ -74,7 +74,7 @@ let s:p.visual.right =  [
 
 let s:p.replace.left =  [
             \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
-            \ s:p.normal.left[1],
+            \ [ s:guicolors.red, s:guicolors.mono4, 'bold' ],
             \ s:p.normal.left[2]
             \ ]
 let s:p.replace.right = [
