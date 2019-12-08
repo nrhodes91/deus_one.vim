@@ -41,59 +41,62 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 let s:p.normal.left =   [
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ],
+            \ [ s:guicolors.green, s:guicolors.mono4, 'bold' ],
             \ [ s:guicolors.mono1, s:guicolors.black ]
             \ ]
-let s:p.insert.left =   [
-            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ],
-            \ s:p.normal.left[2]
-            \ ]
-let s:p.visual.left =   [
-            \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
-            \ s:p.normal.left[1],
-            \ s:p.normal.left[2]
-            \ ]
-let s:p.replace.left =  [
-            \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
-            \ s:p.normal.left[1],
-            \ s:p.normal.left[2]
-            \ ]
-let s:p.inactive.left = [
-            \ [ s:guicolors.mono1, s:guicolors.mono4 ]
-            \ ]
-
-let s:p.normal.middle = [ s:p.normal.left[2] ]
-let s:p.insert.middle = s:p.normal.middle
-let s:p.replace.middle = s:p.normal.middle
-
 let s:p.normal.right =  [
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
             \ [ s:guicolors.black, s:guicolors.green, 'bold' ],
-            \ [ s:guicolors.green, s:guicolors.black ]
+            \ s:p.normal.left[2]
+            \ ]
+
+let s:p.insert.left =   [
+            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
+            \ [ s:guicolors.blue, s:guicolors.mono4, 'bold' ],
+            \ s:p.normal.left[2]
             \ ]
 let s:p.insert.right =  [
             \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
-            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
+            \ [ s:guicolors.blue, s:guicolors.blue, 'bold' ],
             \ [ s:guicolors.blue, s:guicolors.black ]
+            \ ]
+
+let s:p.visual.left =   [
+            \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
+            \ [ s:guicolors.purple, s:guicolors.mono4, 'bold' ],
+            \ s:p.normal.left[2]
             \ ]
 let s:p.visual.right =  [
             \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
             \ [ s:guicolors.black, s:guicolors.purple, 'bold' ],
             \ [ s:guicolors.purple, s:guicolors.black ]
             \ ]
+
+let s:p.replace.left =  [
+            \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
+            \ [ s:guicolors.red, s:guicolors.mono4, 'bold' ],
+            \ s:p.normal.left[2]
+            \ ]
 let s:p.replace.right = [
             \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
             \ [ s:guicolors.black, s:guicolors.red, 'bold' ],
             \ [ s:guicolors.red, s:guicolors.black ]
+            \ ]
+
+let s:p.inactive.left = [
+            \ [ s:guicolors.mono1, s:guicolors.mono4 ]
             \ ]
 let s:p.inactive.right = [
             \ [ s:guicolors.black, s:guicolors.blue ],
             \ s:p.inactive.left[0]
             \ ]
 
+let s:p.normal.middle = [ s:p.normal.left[2] ]
 let s:p.normal.error =  [ [ s:guicolors.black, s:guicolors.red ] ]
 let s:p.normal.warning = [ [ s:guicolors.black, '#e5c07b' ] ]
+
+let s:p.insert.middle = s:p.normal.middle
+let s:p.replace.middle = s:p.normal.middle
 
 let s:p.tabline.left =  [ s:p.normal.left[1] ]
 let s:p.tabline.middle = s:p.normal.middle
