@@ -57,7 +57,7 @@ let s:p.insert.left =   [
             \ ]
 let s:p.insert.right =  [
             \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
-            \ [ s:guicolors.blue, s:guicolors.blue, 'bold' ],
+            \ [ s:guicolors.black, s:guicolors.blue, 'bold' ],
             \ [ s:guicolors.blue, s:guicolors.black ]
             \ ]
 
